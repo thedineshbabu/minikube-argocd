@@ -1,0 +1,12 @@
+appName: helm-dapr
+zipkinEndpoint: http://zipkin.default.svc.cluster.local:9411/api/v2/spans
+rabbitmqHost: rabbitmq.default.svc.cluster.local
+rabbitmqUser: user
+rabbitmqPort: 5672
+rabbitmqProtocol: amqp
+topicName: kf-one
+exchangeKind: topic
+
+subscribePollInterval: 10s
+
+secretsFile: secrets.json
