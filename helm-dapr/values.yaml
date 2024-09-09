@@ -10,3 +10,6 @@ exchangeKind: topic
 subscribePollInterval: 10s
 
 secretsFile: secrets.json
+
+redisHost: redis-master.default.svc.cluster.local:6379
+redisPassword: ""
