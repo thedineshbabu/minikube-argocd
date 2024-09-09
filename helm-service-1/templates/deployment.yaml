@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.appName }}-deployment
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.appName }}
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.appName }}
+      annotations:
+        dapr.io/enabled: "true"  # Enable Dapr
+        dapr.io/app-id: {{ .Values.appName }}  # Unique Dapr app ID
+        dapr.io/app-port: "{{ .Values.port }}"  # Port on which the service is running
+    spec:
+      containers:
+      - name: {{ .Values.appName }}-container
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        ports:
+        - containerPort: {{ .Values.port }}
+        resources:
+          limits:
+            memory: "{{ .Values.limits.memory }}"
+            cpu: "{{ .Values.limits.cpu }}"
+          requests:
+            memory: "{{ .Values.requests.memory }}"
+            cpu: "{{ .Values.requests.cpu }}"
