@@ -6,7 +6,7 @@ port: 8081
 replicas: 2
 
 image:
-  repository: thedineshbabukf/service-2
+  repository: thedineshbabukf/service2
   tag: v2.0
   pullPolicy: IfNotPresent
 
