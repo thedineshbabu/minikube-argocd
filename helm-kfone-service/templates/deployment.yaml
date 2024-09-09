@@ -31,3 +31,14 @@ spec:
           requests:
             memory: "{{ .Values.requests.memory }}"
             cpu: "{{ .Values.requests.cpu }}"
+        env:
+        - name: PUBSUB_NAME
+          value: {{ .Values.PUBSUB_NAME }}
+        - name: TOPIC_NAME
+          value: {{ .Values.TOPIC_NAME }}
+        - name: DAPR_SECRET_STORE
+          value: {{ .Values.DAPR_SECRET_STORE }}
+        - name: CONFIG_STORE_NAME
+          value: {{ .Values.CONFIG_STORE_NAME }}
+        - name: DAPR_HOST
+          value: {{ .Values.DAPR_HOST }}

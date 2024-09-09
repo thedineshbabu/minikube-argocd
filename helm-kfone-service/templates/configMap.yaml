@@ -10,3 +10,4 @@ data:
     TOPIC_NAME: {{ .Values.TOPIC_NAME }}
     DAPR_SECRET_STORE: {{ .Values.DAPR_SECRET_STORE }}
     CONFIG_STORE_NAME: {{ .Values.CONFIG_STORE_NAME }}
+    DAPR_HOST: {{ .Values.DAPR_HOST }}

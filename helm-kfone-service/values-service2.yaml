@@ -21,4 +21,5 @@ requests:
 PUBSUB_NAME: rbt-pubsub
 TOPIC_NAME: kf-one
 DAPR_SECRET_STORE: localsecretstore
-CONFIG_STORE_NAME: pg-configstore
+CONFIG_STORE_NAME: redis-configstore
+DAPR_HOST: http://localhost
