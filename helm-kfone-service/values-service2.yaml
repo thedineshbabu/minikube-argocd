@@ -1,13 +1,13 @@
-appName: service-1
-namespace: service-1
+appName: service-2
+namespace: service-2
 
 port: 8081
 
 replicas: 2
 
 image:
-  repository: thedineshbabukf/service-1
-  tag: latest
+  repository: thedineshbabukf/service-2
+  tag: v2.0
   pullPolicy: IfNotPresent
 
 limits:
