@@ -9,6 +9,6 @@ spec:
   type: LoadBalancer
   ports:
     - port: 80  # Exposed port to external users
-      targetPort: {{ .Values.port }}  # Port on which the service is running
+      targetPort: {{ .Values.appPort }}  # Port on which the service is running
   selector:
     app: {{ .Values.appName }}
