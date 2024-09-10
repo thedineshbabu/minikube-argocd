@@ -13,3 +13,10 @@ secretsFile: secrets.json
 
 redisHost: redis-master.default.svc.cluster.local:6379
 redisPassword: ""
+
+pgHost: my-postgres-postgresql.default.svc.cluster.local
+pgUser: postgres
+pgPwd: xrDvlLwrbX
+pgPort: 5432
+pgDbName: postgres
+configTable: configtable
