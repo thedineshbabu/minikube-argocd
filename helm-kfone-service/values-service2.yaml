@@ -1,9 +1,9 @@
 appName: service2
 namespace: service2
 
-port: 8081
+appPort: 8081
 
-replicas: 2
+replicas: 1
 
 image:
   repository: thedineshbabukf/service2
