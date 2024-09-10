@@ -1,8 +1,7 @@
 apiVersion: dapr.io/v1alpha1
 kind: Configuration
 metadata:
-  name: service1-config
-  namespace: default
+  name: config
 spec:
   tracing:
     samplingRate: "1"

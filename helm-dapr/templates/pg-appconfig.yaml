@@ -2,7 +2,6 @@ apiVersion: dapr.io/v1alpha1
 kind: Component
 metadata:
   name: pg-configstore
-  namespace: default
 spec:
   type: configuration.postgresql
   version: v1
