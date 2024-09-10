@@ -22,7 +22,7 @@ spec:
         dapr.io/log-level: "debug"  # Log level
         dapr.io/app-protocol: "http"
         dapr.io/log-as-json: "true"
-        dapr.io/app-token-secret: "dapr-app-api-jwt"
+        # dapr.io/app-token-secret: "dapr-app-api-jwt"
     spec:
       containers:
       - name: {{ .Values.appName }}-container
