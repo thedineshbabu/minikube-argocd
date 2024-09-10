@@ -7,7 +7,7 @@ replicas: 2
 
 image:
   repository: thedineshbabukf/service1
-  tag: v2.0
+  tag: v3.0
   pullPolicy: IfNotPresent
 
 limits:
