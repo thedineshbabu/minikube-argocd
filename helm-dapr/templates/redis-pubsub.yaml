@@ -2,6 +2,7 @@ apiVersion: dapr.io/v1alpha1
 kind: Component
 metadata:
   name: redis-pubsub
+  namespace: {{ .Values.namespace }}
 spec:
   type: pubsub.redis
   version: v1

@@ -20,3 +20,6 @@ pgPwd: xrDvlLwrbX
 pgPort: 5432
 pgDbName: postgres
 configTable: configtable
+
+# Dapr Release Namespace
+namespace: default
