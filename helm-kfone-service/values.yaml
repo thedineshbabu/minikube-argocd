@@ -1,9 +1,9 @@
 appName: service1
 namespace: service1
 
-port: 8081
+appPort: 8081
 
-replicas: 2
+replicas: 1
 
 image:
   repository: ""
