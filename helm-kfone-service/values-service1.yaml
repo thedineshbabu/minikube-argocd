@@ -3,7 +3,7 @@ namespace: service1
 
 port: 8081
 
-replicas: 2
+replicas: 1
 
 image:
   repository: thedineshbabukf/service1
@@ -22,4 +22,4 @@ PUBSUB_NAME: rbt-pubsub
 TOPIC_NAME: kf-one
 DAPR_SECRET_STORE: localsecretstore
 CONFIG_STORE_NAME: pg-configstore
-DAPR_HOST: http://localhost
+DAPR_HOST: http://127.0.0.1
