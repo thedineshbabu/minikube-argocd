@@ -1,12 +1,12 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: nodeapp
+  name: {{ .Values.appName }}-service
   labels:
-    app: node
+    app: {{ .Values.appName }}
 spec:
   selector:
-    app: node
+    app: {{ .Values.appName }}
   ports:
   - protocol: TCP
     port: 80
@@ -17,25 +17,25 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodeapp
+  name: {{ .Values.appName }}-deployment
   labels:
-    app: node
+    app: {{ .Values.appName }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: node
+      app: {{ .Values.appName }}
   template:
     metadata:
       labels:
-        app: node
+        app: {{ .Values.appName }}
       annotations:
         dapr.io/enabled: "true"
         dapr.io/app-id: "nodeapp"
         dapr.io/app-port: "3000"
     spec:
       containers:
-      - name: node
+      - name: {{ .Values.appName }}-container
         image: ghcr.io/dapr/samples/secretstorenode:latest
         env:
         - name: SECRET_STORE
