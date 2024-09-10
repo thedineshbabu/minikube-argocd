@@ -7,7 +7,7 @@ replicas: 1
 
 image:
   repository: thedineshbabukf/service1
-  tag: v4.0
+  tag: v5.0
   pullPolicy: IfNotPresent
 
 limits:
@@ -18,8 +18,8 @@ requests:
   memory: "256Mi"
   cpu: "250m"
 
-PUBSUB_NAME: rbt-pubsub
+PUBSUB_NAME: redis-pubsub
 TOPIC_NAME: kf-one
 DAPR_SECRET_STORE: localsecretstore
-CONFIG_STORE_NAME: pg-configstore
+CONFIG_STORE_NAME: redis-configstore
 DAPR_HOST: http://127.0.0.1
