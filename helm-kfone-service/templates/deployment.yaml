@@ -18,6 +18,10 @@ spec:
         dapr.io/enabled: "true"  # Enable Dapr
         dapr.io/app-id: {{ .Values.appName }}  # Unique Dapr app ID
         dapr.io/app-port: "{{ .Values.port }}"  # Port on which the service is running
+        dapr.io/disable-builtin-k8s-secret-store: "true"  # Disable the built-in Kubernetes secret store
+        dapr.io/config: "{{ .Values.appName }}-config"  # Dapr configuration
+        dapr.io/sidecar-inject: "true"  # Inject the Dapr sidecar
+        dapr.io/log-level: "debug"  # Log level
     spec:
       containers:
       - name: {{ .Values.appName }}-container
